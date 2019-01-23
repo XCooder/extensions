@@ -1,0 +1,21 @@
+{
+    "name": "Friend List",
+    "description": "Friend List",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "friend-list.html",
+        "default_icon": "./img/grab.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://maimai.cn/im/"], 
+            "js": ["./js/jquery.js", "./js/test.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    }
+}
